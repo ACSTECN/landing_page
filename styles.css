@@ -1,348 +1,382 @@
 /* -------------------- Reset -------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
+
 :root {
-    --bg: #0a0b0f;
-    --bg-alt: #111;
-    --text: #fff;
-    --brand: #009ec5;
-    --accent: #1100ff;
+  --bg: #0a0b0f;
+  --bg-alt: #111;
+  --text: #fff;
+  --brand: #009ec5;
+  --accent: #1100ff;
 }
-  
+
 body {
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: var(--text);
-    line-height: 1.5;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: var(--text);
+  line-height: 1.5;
 }
-  
+
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-  
+
 .card {
-    background: rgba(26, 26, 26, 0.9);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
+  background: rgba(26, 26, 26, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
 }
-  
+
 .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
-  
+
 .card h3, 
 .card p {
-    padding: 10px 15px;
-    margin: 0;
-    text-align: center;
+  padding: 10px 15px;
+  margin: 0;
+  text-align: center;
 }
-  
+
 .card h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #fff;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #fff;
 }
-  
+
 .card p {
-    margin-bottom: 15px;
-    color: #ddd;
-    font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ddd;
+  font-size: 1rem;
 }
-  
+
 /* -------------------- Botões -------------------- */
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
-  
+
 .btn.cta-primary {
-    background: var(--brand);
-    color: #fff !important;
-    font-weight: bold;
-    border: none;
+  background: var(--brand);
+  color: #fff !important;
+  font-weight: bold;
+  border: none;
 }
-  
+
 .btn.cta-primary:hover {
-    opacity: 0.85;
-    transform: scale(1.05);
-    transition: 0.3s ease;
+  opacity: 0.85;
+  transform: scale(1.05);
+  transition: 0.3s ease;
 }
-  
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+}
+
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: inline-block;
+  }
+}
+
 /* -------------------- Header -------------------- */
 .header {
-    background: #000;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  background: #000;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-  
+
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-  
+
 .brand {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--text);
-    font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.2rem;
 }
-  
+
 .brand__img {
-    height: 80px;
-    margin-right: 8px;
+  height: 80px;
+  margin-right: 8px;
 }
-  
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+}
+
 .nav__links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: var(--text);
-    transition: 0.3s;
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
 }
-  
+
 .nav__links a:hover {
-    color: var(--brand);
+  color: var(--brand);
 }
-  
+
 /* -------------------- Hero -------------------- */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
-  
+
 .hero-bg {
-    background: url("imagens/fundo.jpg") no-repeat center center/cover;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
+  background: url("imagens/fundo.jpg") no-repeat center center/cover;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
-  
+
 .hero-content {
-    position: relative;
-    z-index: 2;
-    color: var(--text);
+  position: relative;
+  z-index: 2;
+  color: var(--text);
 }
-  
+
 .hero-topo {
-    max-width: 1000px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
-  
+
 .grad {
-    background: linear-gradient(135deg, var(--brand), orange);
-    -webkit-background-clip: text;
-    color: transparent;
+  background: linear-gradient(135deg, var(--brand), orange);
+  -webkit-background-clip: text;
+  color: transparent;
 }
-  
+
 .sub {
-    margin: 15px 0 25px;
-    font-size: 1.2rem;
+  margin: 15px 0 25px;
+  font-size: 1.2rem;
 }
-  
+
 /* -------------------- Seções -------------------- */
 .section {
-    padding: 80px 0;
-    text-align: center;
-    position: relative;
-    z-index: 1;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
-  
+
 h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
-  
+
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
-  
+
 .card:hover {
-    transform: translateY(-5px);
-    background: rgba(34, 34, 34, 0.95);
+  transform: translateY(-5px);
+  background: rgba(34, 34, 34, 0.95);
 }
-  
+
 /* -------------------- Fundo com imagens -------------------- */
 #sec-beneficios {
-    background: url("imagens/beneficios.jpg") no-repeat center center/cover;
-    position: relative;
+  background: url("imagens/beneficios.jpg") no-repeat center center/cover;
+  position: relative;
 }
-  
+
 #sec-beneficios::before,
 #sec-joao::before,
 #sec-pacientes::before,
 #sec-conquistas::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
 }
-  
+
 #sec-beneficios .container,
 #sec-joao .container,
 #sec-pacientes .container,
 #sec-conquistas .container {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
-  
+
 #sec-joao {
-    background: url("imagens/2fundo.jpg") no-repeat center center/cover;
+  background: url("imagens/2fundo.jpg") no-repeat center center/cover;
 }
-  
+
 #sec-pacientes {
-    background: url("imagens/fundopaci.jpg") no-repeat center center/cover;
+  background: url("imagens/fundopaci.jpg") no-repeat center center/cover;
 }
-  
+
 #sec-conquistas {
-    background: url("imagens/resultados.jpg") no-repeat center center/cover;
+  background: url("imagens/resultados.jpg") no-repeat center center/cover;
 }
-  
-.azul,
-.bene,
-.result,
-.conqui {
-    background: linear-gradient(90deg, #00bfff, #31f1ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    display: inline-block;
+
+.azul {
+  background: linear-gradient(90deg, #00bfff, #31f1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  margin-left: 6px;
 }
-  
+
+.bene, .result, .conqui {
+  background: linear-gradient(90deg, #00bfff, #31f1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
 /* -------------------- João Claro -------------------- */
 .sobre__in {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
 }
-  
+
 .sobre__img {
-    flex: 1 1 350px;
-    text-align: center;
+  flex: 1 1 350px;
+  text-align: center;
 }
-  
+
 .sobre__img img {
-    max-width: 350px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
-  
+
 .sobre__text {
-    flex: 1 1 500px;
-    color: var(--text);
-    text-align: left;
+  flex: 1 1 500px;
+  color: var(--text);
+  text-align: left;
 }
-  
+
+.sobre__text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.sobre__text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sobre__text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.sobre__text i {
+  margin-right: 8px;
+  color: var(--brand);
+}
+
+@media (max-width: 768px) {
+  .sobre__text {
+    text-align: center;
+  }
+}
+
 /* -------------------- Social links -------------------- */
 .social-links {
-    margin-top: 25px;
-    display: flex;
-    gap: 30px;
+  margin-top: 25px;
+  display: flex;
+  gap: 30px;
 }
-  
+
 .social-links a {
-    font-size: 3rem;
-    color: #fff;
-    transition: transform 0.3s, color 0.3s;
+  font-size: 3rem;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
 }
-  
+
 .social-links a:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
-  
+
 .social-links .fa-instagram {
-    color: #8400ff;
+  color: #8400ff;
 }
-  
+
 .social-links .fa-whatsapp {
-    color: #25d366;
+  color: #25d366;
 }
-  
+
 /* -------------------- Footer -------------------- */
 .footer {
-    background: #000;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #aaa;
+  background: #000;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
 }
-  
-/* -------------------- Carrossel -------------------- */
-.carrossel, .carrossel-conquistas {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 20px 0;
+
+/* -------------------- Carrossel (Swiper) -------------------- */
+.mySwiperPacientes img,
+.mySwiperConquistas img {
+  width: 400px;   /* desktop */
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 6px;
+  padding: 4px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  display: block;
 }
-  
-.carrossel-track {
-    display: flex;
-    width: calc(200%);
-    animation: scroll 30s linear infinite;
+
+@media (max-width: 768px) {
+  .mySwiperPacientes img,
+  .mySwiperConquistas img {
+    width: 120px;  /* mobile */
+  }
 }
-  
-.carrossel img,
-.carrossel-conquistas img {
-    width: 250px;
-    height: auto;
-    object-fit: contain;
-    margin: 0 15px;
-    border-radius: 8px;
-    padding: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-  
-@keyframes scroll {
-    from { transform: translateX(-50%); }
-    to { transform: translateX(0); }
-}
-  
-.carrossel-track-conquistas {
-    display: flex;
-    width: max-content; 
-    animation: scrollConquistas 45s linear infinite;
-}
-  
-@keyframes scrollConquistas {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
-  
-/* -------------------- Menu Hamburguer -------------------- */
+
+/* -------------------- Responsividade Header -------------------- */
+/* Ícone hamburguer */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -352,13 +386,19 @@ h2 {
   cursor: pointer;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .menu-toggle {
-    display: block; /* aparece no mobile */
+    display: block;
   }
 
   .nav__links {
-    display: none; /* escondido por padrão */
+    display: none;
     flex-direction: column;
     gap: 15px;
     background: #000;
@@ -371,70 +411,22 @@ h2 {
   }
 
   .nav__links.show {
-    display: flex; /* aparece quando abrir */
+    display: flex;
+  }
+
+  .brand {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .brand__img {
+    height: 50px;
   }
 
   .btn.cta-primary {
     width: 100%;
     margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }
-/* Ajustes só no celular */
-@media (max-width: 768px) {
-
-  /* Topo menor */
-  .hero {
-    height: 70vh; /* em vez de 100% da tela */
-  }
-
-  .hero-topo {
-    max-width: 600px; /* imagem menor */
-  }
-
-  /* Cards - imagens não ficam tão "altas" */
-  .card img {
-    height: 150px; /* em vez de 200px */
-  }
-
-  /* Carrosséis - mostra imagens menores */
-  .carrossel img,
-  .carrossel-conquistas img {
-    width: 180px; /* reduz largura */
-  }
-}
-
-@media (max-width: 768px) {
-  /* Faz o fundo aparecer inteiro */
-  #sec-beneficios,
-  #sec-joao,
-  #sec-pacientes,
-  #sec-conquistas,
-  .hero-bg {
-    background-size: contain;   /* mostra a imagem inteira */
-    background-repeat: no-repeat;
-    background-position: center top;
-  }
-
-  /* Como o contain pode deixar espaço sobrando embaixo,
-     coloca um fundo preto pra não ficar feio */
-  #sec-beneficios,
-  #sec-joao,
-  #sec-pacientes,
-  #sec-conquistas,
-  .hero-bg {
-    background-color: #000;
-  }
-
-  /* Ajusta altura mínima pra não colapsar */
-  .hero {
-    min-height: 70vh;
-  }
-  #sec-beneficios,
-  #sec-joao,
-  #sec-pacientes,
-  #sec-conquistas {
-    min-height: 80vh;
-  }
-}
-
-
