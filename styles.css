@@ -26,7 +26,7 @@ body {
   margin: 0 auto;
 }
 
-/* -------------------- Card -------------------- */
+/* -------------------- Cards -------------------- */
 .card {
   background: rgba(26, 26, 26, 0.9);
   border-radius: 10px;
@@ -94,16 +94,6 @@ body {
   background: transparent;
   border: 1px solid var(--text);
   color: var(--text);
-}
-
-.hide-mobile {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .hide-mobile {
-    display: inline-block;
-  }
 }
 
 /* -------------------- Header -------------------- */
@@ -222,11 +212,6 @@ h2 {
   z-index: 0;
 }
 
-#sec-beneficios .container {
-  position: relative;
-  z-index: 1;
-}
-
 #sec-joao {
   background: url("imagens/2fundo.jpg") no-repeat center center/cover;
   position: relative;
@@ -238,11 +223,6 @@ h2 {
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 0;
-}
-
-#sec-joao .container {
-  position: relative;
-  z-index: 1;
 }
 
 #sec-pacientes {
@@ -258,11 +238,6 @@ h2 {
   z-index: 0;
 }
 
-#sec-pacientes .container {
-  position: relative;
-  z-index: 1;
-}
-
 #sec-conquistas {
   background: url("imagens/resultados.jpg") no-repeat center center/cover;
   position: relative;
@@ -276,12 +251,7 @@ h2 {
   z-index: 0;
 }
 
-#sec-conquistas .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* -------------------- Textos especiais -------------------- */
+/* -------------------- Títulos com gradiente -------------------- */
 .azul,
 .bene,
 .result,
@@ -290,6 +260,8 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   display: inline-block;
 }
 
@@ -297,8 +269,6 @@ h2 {
 .result,
 .conqui {
   font-size: 2.5rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 /* -------------------- João Claro -------------------- */
@@ -344,12 +314,6 @@ h2 {
 .sobre__text i {
   margin-right: 8px;
   color: var(--brand);
-}
-
-@media (max-width: 768px) {
-  .sobre__text {
-    text-align: center;
-  }
 }
 
 /* -------------------- Social links -------------------- */
@@ -453,7 +417,7 @@ h2 {
   }
 }
 
-/* -------------------- Menu Hamburguer -------------------- */
+/* -------------------- Header responsivo -------------------- */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -464,34 +428,10 @@ h2 {
   z-index: 20;
 }
 
-/* -------------------- Responsividade -------------------- */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
     align-items: center;
-  }
-
-  .nav__links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .brand {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .brand__img {
-    height: 50px;
-  }
-
-  .btn.cta-primary {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    padding: 8px 16px;
   }
 
   .menu-toggle {
@@ -517,40 +457,30 @@ h2 {
     display: flex;
   }
 
-  /* HERO ajustes mobile */
-  .hero {
-    height: 70vh;
-    background-size: contain;
-    background-position: top center;
-  }
-
-  .hero-content h1 {
-    font-size: 1.6rem;
-    line-height: 1.3;
-    padding: 0 10px;
-  }
-
-  .hero-content .sub {
+  .brand {
     font-size: 1rem;
-    padding: 0 15px;
+    text-align: center;
   }
 
-  .hero-topo {
-    max-width: 80%;
-    margin-bottom: 15px;
+  .brand__img {
+    height: 50px;
   }
 
-  /* Carrossel mobile */
-  .carrossel img,
-  .carrossel-conquistas img {
-    width: 85%;
-    max-width: 350px;
-    margin: 0 auto;
-    display: block;
+  .btn.cta-primary {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 
-  .carrossel,
-  .carrossel-conquistas {
-    padding: 10px 0 30px;
+  /* 🔹 Mostrar mais do fundo */
+  #sec-beneficios,
+  #sec-joao,
+  #sec-pacientes,
+  #sec-conquistas {
+    min-height: 120vh; /* aumenta altura */
+    background-size: contain; /* mostra imagem inteira */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #000;
   }
 }
