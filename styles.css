@@ -84,12 +84,6 @@ body {
     transition: 0.3s ease;
 }
   
-.btn.ghost {
-    background: transparent;
-    border: 1px solid var(--text);
-    color: var(--text);
-}
-  
 /* -------------------- Header -------------------- */
 .header {
     background: #000;
@@ -203,79 +197,9 @@ h2 {
     position: relative;
 }
   
-#sec-beneficios::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 0;
-}
-  
-#sec-beneficios .container {
-    position: relative;
-    z-index: 1;
-}
-  
-#sec-joao {
-    background: url("imagens/2fundo.jpg") no-repeat center center/cover;
-    position: relative;
-}
-  
-#sec-joao::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 0;
-}
-  
-#sec-joao .container {
-    position: relative;
-    z-index: 1;
-}
-  
-#sec-pacientes {
-    background: url("imagens/fundopaci.jpg") no-repeat center center/cover;
-    position: relative;
-}
-  
-#sec-pacientes::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 0;
-}
-  
-#sec-pacientes .container {
-    position: relative;
-    z-index: 1;
-}
-  
-.azul {
-    background: linear-gradient(90deg, #00bfff, #31f1ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    margin-left: 6px;
-}
-  
-.bene, .result, .conqui {
-    background: linear-gradient(90deg, #00bfff, #31f1ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    display: inline-block;
-}
-  
-#sec-conquistas {
-    background: url("imagens/resultados.jpg") no-repeat center center/cover;
-    position: relative;
-}
-  
+#sec-beneficios::before,
+#sec-joao::before,
+#sec-pacientes::before,
 #sec-conquistas::before {
     content: "";
     position: absolute;
@@ -284,9 +208,38 @@ h2 {
     z-index: 0;
 }
   
+#sec-beneficios .container,
+#sec-joao .container,
+#sec-pacientes .container,
 #sec-conquistas .container {
     position: relative;
     z-index: 1;
+}
+  
+#sec-joao {
+    background: url("imagens/2fundo.jpg") no-repeat center center/cover;
+}
+  
+#sec-pacientes {
+    background: url("imagens/fundopaci.jpg") no-repeat center center/cover;
+}
+  
+#sec-conquistas {
+    background: url("imagens/resultados.jpg") no-repeat center center/cover;
+}
+  
+.azul,
+.bene,
+.result,
+.conqui {
+    background: linear-gradient(90deg, #00bfff, #31f1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
 }
   
 /* -------------------- João Claro -------------------- */
@@ -312,26 +265,6 @@ h2 {
     flex: 1 1 500px;
     color: var(--text);
     text-align: left;
-}
-  
-.sobre__text h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-  
-.sobre__text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-  
-.sobre__text p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-  
-.sobre__text i {
-    margin-right: 8px;
-    color: var(--brand);
 }
   
 /* -------------------- Social links -------------------- */
@@ -369,7 +302,7 @@ h2 {
 }
   
 /* -------------------- Carrossel -------------------- */
-.carrossel {
+.carrossel, .carrossel-conquistas {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -382,39 +315,7 @@ h2 {
     animation: scroll 30s linear infinite;
 }
   
-.carrossel img {
-    width: 250px;
-    height: auto;
-    object-fit: contain;
-    margin: 0 15px;
-    border-radius: 8px;
-    padding: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    background: transparent;
-}
-  
-@keyframes scroll {
-    from {
-      transform: translateX(-50%);
-    }
-    to {
-      transform: translateX(0);
-    }
-}
-  
-.carrossel-conquistas {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 20px 0;
-}
-  
-.carrossel-track-conquistas {
-    display: flex;
-    width: max-content; 
-    animation: scrollConquistas 45s linear infinite;
-}
-  
+.carrossel img,
 .carrossel-conquistas img {
     width: 250px;
     height: auto;
@@ -423,18 +324,24 @@ h2 {
     border-radius: 8px;
     padding: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    background: transparent;
+}
+  
+@keyframes scroll {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+  
+.carrossel-track-conquistas {
+    display: flex;
+    width: max-content; 
+    animation: scrollConquistas 45s linear infinite;
 }
   
 @keyframes scrollConquistas {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
-
+  
 /* -------------------- Menu Hamburguer -------------------- */
 .menu-toggle {
   display: none;
