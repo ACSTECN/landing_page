@@ -123,6 +123,7 @@ body {
   text-decoration: none;
   color: var(--text);
   font-size: 1.2rem;
+  margin-left: 0;  /* força mais para a esquerda */
 }
 
 .brand__img {
@@ -132,11 +133,12 @@ body {
 
 .nav__links {
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  margin-left: auto; /* centraliza mais os menus */
+  margin-right: auto;
 }
 
 .nav__links a {
-  margin: 0 10px;
   text-decoration: none;
   color: var(--text);
   transition: 0.3s;
@@ -258,15 +260,24 @@ h2 {
   margin-left: 6px;
 }
 
+/* -------------------- Títulos principais -------------------- */
 .bene, .result, .conqui {
   background: linear-gradient(90deg, #00bfff, #31f1ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.5rem;  /* tamanho desktop */
   letter-spacing: 2px;
   text-transform: uppercase;
   display: inline-block;
+}
+
+/* Mobile: títulos menores */
+@media (max-width: 768px) {
+  .bene, .result, .conqui {
+    font-size: 1.6rem; /* menor no celular */
+    letter-spacing: 1px;
+  }
 }
 
 /* -------------------- João Claro -------------------- */
@@ -320,11 +331,12 @@ h2 {
   }
 }
 
-/* -------------------- Social links -------------------- */
+/* -------------------- Social links + botão -------------------- */
 .social-links {
   margin-top: 25px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  align-items: center;
 }
 
 .social-links a {
@@ -343,6 +355,14 @@ h2 {
 
 .social-links .fa-whatsapp {
   color: #25d366;
+}
+
+/* Botão Garantir vaga alinhado */
+.social-links .btn.cta-primary {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border-radius: 8px;
+  margin-left: 0;   /* gruda mais na esquerda */
 }
 
 /* -------------------- Footer -------------------- */
@@ -371,7 +391,7 @@ h2 {
 @media (max-width: 768px) {
   .mySwiperPacientes img,
   .mySwiperConquistas img {
-    width: 500px;  /* mobile */
+    width: 160px;  /* mobile maior */
   }
 }
 
@@ -416,7 +436,7 @@ h2 {
 
   .brand {
     font-size: 1rem;
-    text-align: center;
+    text-align: left; /* logo mais à esquerda */
   }
 
   .brand__img {
