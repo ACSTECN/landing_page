@@ -431,7 +431,7 @@ h2 {
   #sec-joao,
   #sec-pacientes,
   #sec-conquistas {
-    background-size: 120% auto; /* mostra mais do fundo */
-    background-position: center top;
+    background-size: cover; /* garante que sempre preenche */
+    min-height: 100vh; /* força a section a mostrar mais fundo */
+    background-position: center center;
   }
-}
