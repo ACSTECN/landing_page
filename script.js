@@ -10,7 +10,7 @@ const swiperPacientes = new Swiper(".mySwiperPacientes", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  slidesPerView: 1, // padrão (mobile)
+  slidesPerView: 3, // padrão (mobile)
   spaceBetween: 20, // espaçamento entre imagens
   breakpoints: {
     640: {
@@ -36,7 +36,7 @@ const swiperConquistas = new Swiper(".mySwiperConquistas", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  slidesPerView: 1,
+  slidesPerView: 3,
   spaceBetween: 50,
   breakpoints: {
     640: {
