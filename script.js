@@ -1,48 +1,53 @@
-// Swiper inicialização
-const swiper = new Swiper(".mySwiper", {
+// Swiper para Resultados dos Pacientes
+const swiperPacientes = new Swiper(".mySwiperPacientes", {
   loop: true,
-  slidesPerView: 3,
-  spaceBetween: 20,
   autoplay: {
-    delay: 3000,
+    delay: 500, // 3 segundos por slide
     disableOnInteraction: false,
   },
+  speed: 800, // velocidade da transição
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  slidesPerView: 1, // padrão (mobile)
+  spaceBetween: 20, // espaçamento entre imagens
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
     640: {
       slidesPerView: 2,
+      spaceBetween: 20,
     },
     1024: {
       slidesPerView: 3,
+      spaceBetween: 30, // no desktop pode dar mais espaço
     },
   },
 });
 
-const swiperPacientes = new Swiper(".mySwiperPacientes", {
+// Swiper para Conquistas
+const swiperConquistas = new Swiper(".mySwiperConquistas", {
   loop: true,
   autoplay: {
-    delay: 2500, // tempo por slide
-    reverseDirection: true,
+    delay: 500,
     disableOnInteraction: false,
   },
-  speed: 800, // transição
+  speed: 800,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  slidesPerView: 1, // 👉 mostra 1 de cada vez
-  spaceBetween: 20,
+  slidesPerView: 1,
+  spaceBetween: 50,
   breakpoints: {
-    320: { slidesPerView: 1 },
-    640: { slidesPerView: 1 },
-    1024: { slidesPerView: 1 },
-  }
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },s
+  },
 });
 
 // Atualiza ano no footer
