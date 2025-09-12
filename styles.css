@@ -397,6 +397,13 @@ h2 {
 
 /* -------------------- Responsividade Header -------------------- */
 /* Ícone hamburguer */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ícone hamburguer */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -411,10 +418,23 @@ h2 {
   .nav {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center; /* garante alinhamento vertical */
   }
 
   .menu-toggle {
     display: block;
+    margin-left: 10px;   /* espaço entre o texto BODYBROTHERS e o ícone */
+  }
+
+  .brand {
+    font-size: 0.9rem;
+    text-align: left;
+    flex: 1;  /* ocupa o espaço à esquerda */
+  }
+
+  .brand__img {
+    height: 45px;
+    margin-right: 6px;
   }
 
   .nav__links {
@@ -433,20 +453,11 @@ h2 {
   .nav__links.show {
     display: flex;
   }
-
-  .brand {
-    font-size: 1rem;
-    text-align: left; /* logo mais à esquerda */
-  }
-
-  .brand__img {
-    height: 50px;
-  }
-
+}
   .btn.cta-primary {
     width: 100%;
     margin-top: 10px;
     font-size: 0.9rem;
     padding: 8px 16px;
   }
-}
+
