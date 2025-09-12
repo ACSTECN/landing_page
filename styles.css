@@ -403,3 +403,38 @@ h2 {
   }
 }
 
+@media (max-width: 768px) {
+  /* Faz o fundo aparecer inteiro */
+  #sec-beneficios,
+  #sec-joao,
+  #sec-pacientes,
+  #sec-conquistas,
+  .hero-bg {
+    background-size: contain;   /* mostra a imagem inteira */
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  /* Como o contain pode deixar espaço sobrando embaixo,
+     coloca um fundo preto pra não ficar feio */
+  #sec-beneficios,
+  #sec-joao,
+  #sec-pacientes,
+  #sec-conquistas,
+  .hero-bg {
+    background-color: #000;
+  }
+
+  /* Ajusta altura mínima pra não colapsar */
+  .hero {
+    min-height: 70vh;
+  }
+  #sec-beneficios,
+  #sec-joao,
+  #sec-pacientes,
+  #sec-conquistas {
+    min-height: 80vh;
+  }
+}
+
+
