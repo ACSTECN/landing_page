@@ -512,3 +512,46 @@
     padding: 8px 16px;
   }
 }
+/* Ícone hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block; /* aparece no mobile */
+  }
+
+  .nav__links {
+    display: none; /* escondido por padrão */
+    flex-direction: column;
+    gap: 15px;
+    background: #000;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__links.show {
+    display: flex; /* aparece quando abrir */
+  }
+
+  .btn.cta-primary {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
