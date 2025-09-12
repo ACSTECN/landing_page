@@ -46,7 +46,7 @@ const swiperConquistas = new Swiper(".mySwiperConquistas", {
     1024: {
       slidesPerView: 3,
       spaceBetween: 30,
-    },s
+    },
   },
 });
 
