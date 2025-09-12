@@ -371,7 +371,7 @@ h2 {
 @media (max-width: 768px) {
   .mySwiperPacientes img,
   .mySwiperConquistas img {
-    width: 200px;  /* mobile */
+    width: 500px;  /* mobile */
   }
 }
 
