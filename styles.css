@@ -379,3 +379,27 @@ h2 {
     margin-top: 10px;
   }
 }
+/* Ajustes só no celular */
+@media (max-width: 768px) {
+
+  /* Topo menor */
+  .hero {
+    height: 70vh; /* em vez de 100% da tela */
+  }
+
+  .hero-topo {
+    max-width: 600px; /* imagem menor */
+  }
+
+  /* Cards - imagens não ficam tão "altas" */
+  .card img {
+    height: 150px; /* em vez de 200px */
+  }
+
+  /* Carrosséis - mostra imagens menores */
+  .carrossel img,
+  .carrossel-conquistas img {
+    width: 180px; /* reduz largura */
+  }
+}
+
