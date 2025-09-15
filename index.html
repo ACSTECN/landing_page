@@ -8,157 +8,207 @@
   <link rel="icon" type="image/x-icon" href="imagens/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO -->
+  <meta name="description" content="Planos de treino, vídeo-aulas e suporte com foco em resultados reais. Transforme seu corpo com o time BodyBrothers e João Claro.">
+
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-<!-- Header -->
-<header class="header" id="top">
-  <div class="container nav">
-    <a class="brand" href="#top">
-      <img src="imagens/logo.png" alt="Logo João Claro" class="brand__img">
-      FAÇA PARTE DO TIME <span class="azul">BODYBROTHERS</span>
-    </a>
+  <!-- Fundo com partículas -->
+  <div id="tsparticles"></div>
 
-    <!-- Botão hamburguer -->
-    <button class="menu-toggle" id="menuToggle">
-      <i class="fas fa-bars"></i>
-    </button>
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="imagens/logo.png" alt="Logo João Claro" class="brand__img">
+        FAÇA PARTE DO TIME <span class="azul">BODYBROTHERS</span>
+      </a>
 
-    <!-- Links do menu -->
-    <nav class="nav__links" id="navLinks">
-      <a href="#sec-beneficios">Benefícios</a>
-      <a href="#sec-joao">Sobre</a>
-      <a href="#sec-pacientes">Resultados</a>
-      <a href="#sec-conquistas">Conquistas</a>
-      
-    </nav>
-  </div>
-</header>
+      <!-- Botão hamburguer -->
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars"></i>
+      </button>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <img src="imagens/topo.png" alt="Topo" class="hero-topo">
-    <h1>Seja um Grande Campeão e <span class="grad">evolua de verdade</span></h1>
-    <p class="sub">Planos de treino, vídeo-aulas e suporte com foco em resultados reais.</p>
-  </div>
-</section>
+      <!-- Links do menu -->
+      <nav class="nav__links" id="navLinks">
+        <a href="#sec-beneficios">Benefícios</a>
+        <a href="#sec-joao">Sobre</a>
+        <a href="#sec-pacientes">Resultados</a>
+        <a href="#sec-conquistas">Conquistas</a>
+        <a href="#sec-patrocinadores">Patrocinadores</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- Benefícios -->
-<section id="sec-beneficios" class="section">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <img src="imagens/topo.png" alt="Topo" class="hero-topo">
+      <h1>Seja um Grande Campeão e <span class="grad">evolua de verdade</span></h1>
+      <p class="sub">Planos de treino, vídeo-aulas e suporte com foco em resultados reais.</p>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="sec-beneficios" class="section">
+    <div class="container">
+      <h2 class="bene">BENEFÍCIOS</h2>
+      <div class="grid-3">
+        <div class="card">
+          <img src="imagens/execucao.png" alt="Execução padrão ouro">
+          <h3>EXECUÇÃO PADRÃO OURO</h3>
+          <p>Passo a passo em vídeo para corrigir sua técnica e alcançar a melhor performance.</p>
+        </div>
+        <div class="card">
+          <img src="imagens/protocolo.png" alt="Treino de monstro">
+          <h3>TREINO DE MONSTRO</h3>
+          <p>Protocolos de treino completos, do iniciante ao avançado, com foco em todos os principais grupamentos musculares.</p>
+        </div>
+        <div class="card">
+          <img src="imagens/dieta.png" alt="Alimentação top 1">
+          <h3>ALIMENTAÇÃO TOP 1</h3>
+          <p>Sugestões e Bases Alimentares Prontas, com contagem de calorias e macros nutrientes.</p>
+        </div>
+        <div class="card">
+          <img src="imagens/suporte.png" alt="Alimentação top 1">
+          <h3>SUPORTE INDIVIDUAL</h3>
+          <p>recurso reservado aos assinantes do acompanhamento BodyBrothers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultados -->
+  <section id="sec-pacientes" class="section alt">
+    <div class="container">
+      <h2 class="result">Resultados dos Pacientes</h2>
+      <div class="swiper mySwiperPacientes">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="imagens/ANTES1.png" alt="Paciente 1"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES2.png" alt="Paciente 2"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES3.png" alt="Paciente 3"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES4.png" alt="Paciente 4"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES5.png" alt="Paciente 5"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES6.png" alt="Paciente 6"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES7.png" alt="Paciente 7"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES8.png" alt="Paciente 8"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES9.png" alt="Paciente 9"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES10.png" alt="Paciente 10"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES11.png" alt="Paciente 11"></div>
+          <div class="swiper-slide"><img src="imagens/ANTES12.png" alt="Paciente 12"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conquistas -->
+  <section id="sec-conquistas" class="section alt">
+    <div class="container">
+      <h2 class="conqui">Algumas Conquistas</h2>
+      <div class="swiper mySwiperConquistas">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="imagens/c10.jpg" alt="Conquista 1"></div>
+          <div class="swiper-slide"><img src="imagens/c11.jpg" alt="Conquista 2"></div>
+          <div class="swiper-slide"><img src="imagens/c3.jpg" alt="Conquista 3"></div>
+          <div class="swiper-slide"><img src="imagens/c4.jpg" alt="Conquista 4"></div>
+          <div class="swiper-slide"><img src="imagens/c5.jpg" alt="Conquista 5"></div>
+          <div class="swiper-slide"><img src="imagens/c6.jpg" alt="Conquista 6"></div>
+          <div class="swiper-slide"><img src="imagens/c7.jpg" alt="Conquista 7"></div>
+          <div class="swiper-slide"><img src="imagens/c8.jpg" alt="Conquista 8"></div>
+          <div class="swiper-slide"><img src="imagens/c9.jpg" alt="Conquista 9"></div>
+          <div class="swiper-slide"><img src="imagens/c1.jpg" alt="Conquista 10"></div>
+          <div class="swiper-slide"><img src="imagens/c2.jpg" alt="Conquista 11"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+<!-- Patrocinadores -->
+<section id="sec-patrocinadores" class="section alt">
   <div class="container">
-    <h2 class="bene">BENEFÍCIOS</h2>
+    <h2 class="conqui">Patrocinadores Oficiais</h2>
+    
     <div class="grid-3">
-      <div class="card">
-        <img src="imagens/execucao.png" alt="Execução perfeita">
-        <h3>Execução perfeita</h3>
-        <p>Aulas em vídeo mostrando a biomecânica correta.</p>
-      </div>
-      <div class="card">
-        <img src="imagens/protocolo.png" alt="Protocolos de treinos">
-        <h3>Protocolos de treinos</h3>
-        <p>Treinos do iniciante ao avançado prontos para usar.</p>
-      </div>
-      <div class="card">
-        <img src="imagens/dieta.png" alt="Dieta e planejamento">
-        <h3>Dieta e planejamento</h3>
-        <p>Dúvidas respondidas para manter sua evolução.</p>
-      </div>
-      <div class="card">
-        <img src="imagens/suporte.png" alt="Suporte individual">
-        <h3>Suporte individual</h3>
-        <p>Acompanhamento próximo para não deixar você parar.</p>
-      </div>
+      <!-- Casarão Suplementos -->
+      <a href="https://www.casaraosuplementos.com.br" target="_blank" class="card patrocinador">
+        <img src="imagens/logocasarao.png" alt="Casarão Suplementos">
+        <div class="cupom">
+          <p>Use o cupom: <strong>ClaroQÉ10</strong></p>
+        </div>
+      </a>
+    
+      <!-- Melhor Terapia -->
+      <a href="https://www.melhorterapia.com.br" target="_blank" class="card patrocinador">
+        <img src="imagens/melhorterapia.png" alt="Melhor Terapia">
+        <div class="cupom">
+          <p>Use o cupom: <strong>ClaroQÉ10</strong></p>
+        </div>
+      </a>
+    
+      <!-- Lauton Nutrition -->
+      <a href="https://www.lauton.com.br" target="_blank" class="card patrocinador">
+        <img src="imagens/lauton.jpg" alt="Lauton Nutrition">
+        <div class="cupom">
+          <p>Use o cupom: <strong>ClaroQÉ15</strong></p>
+        </div>
+      </a>
     </div>
+    
+    
+
+    </div>
+    
   </div>
 </section>
 
-<!-- Resultados -->
-<section id="sec-pacientes" class="section alt">
-  <div class="container">
-    <h2 class="result">Resultados dos Pacientes</h2>
-    <div class="swiper mySwiperPacientes">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="imagens/ANTES1.png" alt="Paciente 1"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES2.png" alt="Paciente 2"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES3.png" alt="Paciente 3"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES4.png" alt="Paciente 4"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES5.png" alt="Paciente 5"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES6.png" alt="Paciente 6"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES7.png" alt="Paciente 7"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES8.png" alt="Paciente 8"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES9.png" alt="Paciente 9"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES10.png" alt="Paciente 10"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES11.png" alt="Paciente 10"></div>
-        <div class="swiper-slide"><img src="imagens/ANTES12.png" alt="Paciente 10"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
 
-<!-- Conquistas -->
-<section id="sec-conquistas" class="section alt">
-  <div class="container">
-    <h2 class="conqui">Algumas Conquistas</h2>
-    <div class="swiper mySwiperConquistas">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="imagens/c10.jpg" alt="Conquista 1"></div>
-        <div class="swiper-slide"><img src="imagens/c11.jpg" alt="Conquista 2"></div>
-        <div class="swiper-slide"><img src="imagens/c3.jpg" alt="Conquista 3"></div>
-        <div class="swiper-slide"><img src="imagens/c4.jpg" alt="Conquista 4"></div>
-        <div class="swiper-slide"><img src="imagens/c5.jpg" alt="Conquista 5"></div>
-        <div class="swiper-slide"><img src="imagens/c6.jpg" alt="Conquista 6"></div>
-        <div class="swiper-slide"><img src="imagens/c7.jpg" alt="Conquista 7"></div>
-        <div class="swiper-slide"><img src="imagens/c8.jpg" alt="Conquista 8"></div>
-        <div class="swiper-slide"><img src="imagens/c9.jpg" alt="Conquista 9"></div>
-        <div class="swiper-slide"><img src="imagens/c1.jpg" alt="Conquista 10"></div>
-        <div class="swiper-slide"><img src="imagens/c2.jpg" alt="Conquista 11"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
 
-<!-- João Claro -->
-<section id="sec-joao" class="section sobre">
-  <div class="container sobre__in">
-    <div class="sobre__img">
-      <img src="imagens/JOAO.jpg" alt="João Claro">
-    </div>
-    <div class="sobre__text">
-      <h2>Ele será seu treinador!</h2>
-      <h3>Conheça <span class="grad">João Claro</span></h3>
-      <p><i class="fas fa-user"></i> João Claro, <strong>24 anos</strong>, é atleta e coach de destaque, com uma trajetória marcada por superação e conquistas.</p>
-      <p><i class="fas fa-dumbbell"></i> Após vencer a luta contra a obesidade, transformou sua vida e acumulou títulos importantes no fisiculturismo.</p>
-      <p><i class="fas fa-users"></i> Já guiou inúmeros alunos rumo ao pódio, ajudando-os a conquistar resultados estéticos e qualidade de vida.</p>
-      <p><i class="fas fa-star"></i> Prova de que <strong>qualquer pessoa pode evoluir</strong> com dedicação e método.</p>
-      <div class="social-links">
-        <a href="https://instagram.com/joao_claro_" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.link/a39ha0" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="#sec-preco" class="btn cta-primary">Garantir minha vaga</a>
+  <!-- João Claro -->
+  <section id="sec-joao" class="section sobre">
+    <div class="container sobre__in">
+      <div class="sobre__img">
+        <img src="imagens/JOAO.jpg" alt="João Claro">
+      </div>
+      <div class="sobre__text">
+        <h2>CONHEÇA JOÃO CLARO</h2>
+        <ul class="lista-icones">
+          <li><i class="fas fa-users"></i> CoFundador da Time BODYBROTHERS, que conta com equipe multidisciplinar</li>
+          <li><i class="fas fa-trophy"></i> Aos 24 anos apenas, vem ganhando bastante destaque na Cena BodyBuilding, por ser um dos coachs mais novos a atingir marcas expressivas como 50 troféus</li>
+          <li><i class="fas fa-dumbbell"></i> Após vencer a luta contra obesidade, trancado no período de pandemia e treinando em casa, desistiu de cursar Engenharia na USP para se dedicar ao sonho de ser atleta/coach</li>
+          <li><i class="fas fa-star"></i> Já guiou inúmeros alunos aos seus objetivos que antes pareciam impossíveis, desde pessoas com autoestima abalada a atingirem o corpo que sempre sonharam, até jovens com potenciais rumo ao palco.</li>
+        </ul>
+        
+        <div class="social-links">
+          <a href="https://instagram.com/joao_claro_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.link/a39ha0" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        
+          <!-- E-mail -->
+          <a href="mailto:consultoriabodybrothers@gmail.com?subject=Contato%20via%20site" aria-label="E-mail">
+            <i class="fas fa-envelope"></i><span class="email-text">consultoriabodybrothers@gmail.com</span>
+          </a>
+        
+          <a href="#sec-preco" class="btn cta-primary">Garantir minha vaga</a>
+        </div>
+        
+        
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>© <span id="year"></span> João Claro • Todos os direitos reservados.</p>
-  </div>
-</footer>
-<!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> João Claro • Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
