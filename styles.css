@@ -26,6 +26,7 @@ body {
   margin: 0 auto;
 }
 
+/* -------------------- Cards -------------------- */
 .card {
   background: rgba(26, 26, 26, 0.9);
   border-radius: 10px;
@@ -43,7 +44,7 @@ body {
   display: block;
 }
 
-.card h3, 
+.card h3,
 .card p {
   padding: 10px 15px;
   margin: 0;
@@ -62,6 +63,11 @@ body {
   font-size: 1rem;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(34, 34, 34, 0.95);
+}
+
 /* -------------------- Botões -------------------- */
 .btn {
   display: inline-block;
@@ -77,6 +83,9 @@ body {
   color: #fff !important;
   font-weight: bold;
   border: none;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  max-width: 180px;
 }
 
 .btn.cta-primary:hover {
@@ -123,7 +132,7 @@ body {
   text-decoration: none;
   color: var(--text);
   font-size: 1.2rem;
-  margin-left: 0;  /* força mais para a esquerda */
+  margin-left: 0;
 }
 
 .brand__img {
@@ -134,7 +143,7 @@ body {
 .nav__links {
   display: flex;
   gap: 25px;
-  margin-left: auto; /* centraliza mais os menus */
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -210,11 +219,6 @@ h2 {
   gap: 20px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: rgba(34, 34, 34, 0.95);
-}
-
 /* -------------------- Fundo com imagens -------------------- */
 #sec-beneficios {
   background: url("imagens/beneficios.jpg") no-repeat center center/cover;
@@ -252,6 +256,76 @@ h2 {
   background: url("imagens/resultados.jpg") no-repeat center center/cover;
 }
 
+#sec-patrocinadores {
+  background: url("imagens/patrocinios.png") no-repeat center center/cover;
+  padding-top: 50px;
+}
+
+#sec-patrocinadores h2 {
+  margin-top: -20px;
+}
+
+#sec-patrocinadores .patrocinador {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(26,26,26,0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+#sec-patrocinadores .patrocinador img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex: 1;
+}
+
+#sec-patrocinadores .patrocinador:hover {
+  transform: translateY(-5px);
+  background: rgba(34,34,34,0.95);
+}
+
+#sec-patrocinadores .patrocinador .cupom p {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+#sec-patrocinadores .patrocinador .cupom strong {
+  background: linear-gradient(90deg, #00bfff, #31f1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* -------------------- Lista com ícones -------------------- */
+.lista-icones {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.lista-icones li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lista-icones li i {
+  color: #00bfff;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
 .azul {
   background: linear-gradient(90deg, #00bfff, #31f1ff);
   -webkit-background-clip: text;
@@ -266,16 +340,15 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-  font-size: 2.5rem;  /* tamanho desktop */
+  font-size: 2.5rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: inline-block;
 }
 
-/* Mobile: títulos menores */
 @media (max-width: 768px) {
   .bene, .result, .conqui {
-    font-size: 1.6rem; /* menor no celular */
+    font-size: 1.6rem;
     letter-spacing: 1px;
   }
 }
@@ -337,39 +410,31 @@ h2 {
   display: flex;
   gap: 20px;
   align-items: center;
-  flex-wrap: wrap; /* garante quebra no mobile */
+  flex-wrap: wrap;
 }
 
-
 .social-links a {
-  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 2rem;
   color: #fff;
   transition: transform 0.3s, color 0.3s;
 }
 
 .social-links a:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
-.social-links .fa-instagram {
-  color: #8400ff;
-}
+.social-links .fa-instagram { color: #8400ff; }
+.social-links .fa-whatsapp { color: #25d366; }
+.social-links .fa-envelope { color: #ff4b2b; }
 
-.social-links .fa-whatsapp {
-  color: #25d366;
-}
-
-/* Botão Garantir vaga alinhado */
-/* Botão Garantir vaga alinhado com ícones */
-
-
-.social-links .btn.cta-primary {
-  font-size: 1.2rem;
-  padding: 12px 30px;
-  border-radius: 8px;
-  margin-left: 0;       /* remove deslocamento extra */
-  flex: 1;              /* ocupa o espaço restante */
-  max-width: 280px;     /* trava tamanho */
+/* Texto do e-mail */
+.social-links .email-text {
+  font-size: 1rem;
+  color: #ddd;
+  user-select: all;
 }
 
 @media (max-width: 768px) {
@@ -377,16 +442,17 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
-
+  .social-links .email-text {
+    display: none;
+  }
   .social-links .btn.cta-primary {
     width: 100%;
     max-width: 90%;
     margin: 10px auto 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
   }
 }
-
 
 /* -------------------- Footer -------------------- */
 .footer {
@@ -400,7 +466,7 @@ h2 {
 /* -------------------- Carrossel (Swiper) -------------------- */
 .mySwiperPacientes img,
 .mySwiperConquistas img {
-  width: 400px;   /* desktop */
+  width: 400px;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
@@ -414,19 +480,11 @@ h2 {
 @media (max-width: 768px) {
   .mySwiperPacientes img,
   .mySwiperConquistas img {
-    width: 160px;  /* mobile maior */
+    width: 160px;
   }
 }
 
 /* -------------------- Responsividade Header -------------------- */
-/* Ícone hamburguer */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Ícone hamburguer */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -436,23 +494,22 @@ h2 {
   cursor: pointer;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .nav {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; /* garante alinhamento vertical */
+    align-items: center;
   }
 
   .menu-toggle {
     display: block;
-    margin-left: 10px;   /* espaço entre o texto BODYBROTHERS e o ícone */
+    margin-left: 10px;
   }
 
   .brand {
     font-size: 0.9rem;
     text-align: left;
-    flex: 1;  /* ocupa o espaço à esquerda */
+    flex: 1;
   }
 
   .brand__img {
@@ -477,10 +534,3 @@ h2 {
     display: flex;
   }
 }
-  .btn.cta-primary {
-    width: 100%;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
