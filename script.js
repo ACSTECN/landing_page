@@ -10,7 +10,7 @@ const swiperPacientes = new Swiper(".mySwiperPacientes", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  slidesPerView: 3, // padrão (mobile)
+  slidesPerView: 1, // padrão (mobile)
   spaceBetween: 20, // espaçamento entre imagens
   breakpoints: {
     640: {
@@ -36,7 +36,7 @@ const swiperConquistas = new Swiper(".mySwiperConquistas", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 50,
   breakpoints: {
     640: {
@@ -61,4 +61,20 @@ if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
   });
+}
+// Config base
+const particlesConfig = {
+  background: { color: "#000" },
+  fpsLimit: 60,
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: "grab" },
+      onClick: { enable: true, mode: "push" },
+      resize: true
+    },
+    modes: {
+      grab: { distance: 140, links: { opacity: 0.5 } },
+      push: { quantity: 4 }
+    }
+  },
 }
