@@ -454,6 +454,18 @@ h2 {
   }
 }
 
+/* Mobile */
+@media (max-width: 768px) {
+  .social-links .btn.cta-primary {
+    width: auto;          /* não ocupa toda a largura */
+    max-width: 200px;     /* limite para não ficar gigante */
+    font-size: 0.95rem;   /* letra um pouco menor */
+    padding: 8px 18px;    /* botão mais compacto */
+    border-radius: 6px;   /* cantos mais suaves */
+    margin: 15px auto 0;  /* centralizado abaixo dos ícones */
+  }
+}
+
 /* -------------------- Footer -------------------- */
 .footer {
   background: #000;
