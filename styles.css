@@ -126,7 +126,7 @@ body {
   color: var(--text);
   font-size: 1.2rem;
   margin-left: 0;
-  gap: 10px;                /* espaço entre itens dentro do brand */
+  gap: 10px;
 }
 
 .brand__img {
@@ -134,7 +134,6 @@ body {
   margin-right: 8px;
 }
 
-/* caso mantenha um mascote no header */
 .brand__mascot{
   height: 80px;
   width: auto;
@@ -418,12 +417,13 @@ a { text-decoration: none; }
   .menu-toggle { display: block; margin-left: 10px; }
   .brand { font-size: 0.9rem; text-align: left; flex: 1; }
   .brand__img { height: 45px; margin-right: 6px; }
-  .brand__mascot{ height: 45px; }        /* caso exista no header */
+  .brand__mascot{ height: 45px; }
   .nav__links {
     display: none; flex-direction: column; gap: 15px; background: #000;
     padding: 20px; position: absolute; top: 100%; right: 0; width: 100%; text-align: center;
   }
   .nav__links.show { display: flex; }
+  .nav__links a { padding: 12px 0; font-size: 1.1rem; }
 }
 
 /* ---- Seção Parceria ---- */
@@ -435,10 +435,10 @@ a { text-decoration: none; }
   content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 0;
 }
 #sec-parceria .container {
-  position: relative;           /* âncora do gif */
+  position: relative;
   z-index: 1;
   text-align: center;
-  padding-bottom: 220px;        /* espaço para o GIF no canto */
+  padding-bottom: 220px;
 }
 #sec-parceria h2 {
   font-size: 2rem;
@@ -458,15 +458,12 @@ a { text-decoration: none; }
 .parceria-links .fa-whatsapp { color: #25d366; }
 .parceria-links .fa-envelope { color: #ff4500; }
 
-/* garante âncora e espaço para o GIF na seção Parceria */
 #sec-parceria { position: relative; }
 #sec-parceria .container { position: relative; padding-bottom: 220px; }
 
-/* mascote nas parcerias – canto inferior direito (desktop)  */
 .parceria-mascot{
   position: absolute;
   bottom: 14px;
-  /* empurra além da borda da container; ajusta a gosto */
   right: clamp(-80px, -5vw, -30px);
   height: 220px;
   width: auto;
@@ -476,7 +473,7 @@ a { text-decoration: none; }
   user-select: none;
 }
 
-/* -------------------- Títulos dos cards (gradiente vermelho-azul) -------------------- */
+/* -------------------- Títulos dos cards -------------------- */
 .card-title{
   font-weight: 800;
   text-transform: uppercase;
@@ -495,14 +492,23 @@ a { text-decoration: none; }
 
 /* -------------------- Responsivo & Acessibilidade -------------------- */
 @media (max-width: 1024px){
-  /* aproxima um pouco em telas médias */
   .parceria-mascot{ right: -24px; height: 200px; }
 }
 
 @media (max-width: 768px){
-  /* no mobile, não deixa sair da tela */
-  #sec-parceria .container{ padding-bottom: 140px; }
-  .parceria-mascot{ right: 12px; bottom: 10px; height: 120px; }
+  #sec-parceria .container{ padding-bottom: 100px; }
+  .parceria-mascot{ position: static; margin: 20px auto 0; display: block; height: 100px; }
+  .bene, .result, .conqui { font-size: 1.6rem; letter-spacing: 1px; }
+  .hero { height: auto; padding: 60px 15px; }
+  .hero-topo { max-width: 90%; }
+  .sub { font-size: 1rem; margin: 10px 0 20px; }
+  .grid-3 { grid-template-columns: 1fr; gap: 15px; }
+  .card img { height: 160px; }
+  .card h3 { font-size: 1rem; }
+  .card p { font-size: 0.9rem; }
+  .social-links { flex-direction: column; gap: 12px; }
+  .social-links a { font-size: 2.2rem; }
+  .btn.cta-primary { width: 100%; font-size: 1rem; padding: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce){
