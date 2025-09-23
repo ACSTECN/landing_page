@@ -470,7 +470,7 @@ a { text-decoration: none; }
 /* 🔹 Mascote no canto inferior direito */
 .parceria-mascot{
   position: absolute;
-  bottom: 14px;
+  bottom: -130px;
   right: -350px;
   height: 500px;
   width: auto;
