@@ -471,8 +471,8 @@ a { text-decoration: none; }
 .parceria-mascot{
   position: absolute;
   bottom: 14px;
-  right: 20px;
-  height: 220px;
+  right: -350px;
+  height: 500px;
   width: auto;
   z-index: 2;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,.45));
